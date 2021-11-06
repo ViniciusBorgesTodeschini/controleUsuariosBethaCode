@@ -23,11 +23,12 @@ public class Software {
     @Column(nullable = false, length = 20, name = "tipo_licenca")
     private String tipoLicenca;
 
+    @ManyToOne
     @NotEmpty(message = "O campo empresa deve ser informado!")
     @JoinColumn(name = "id_empresa")
     private Empresa empresa;
 
-    @PrePersist
+    /*@PrePersist
     public void prePersiste(){
         //Betha
         setNome("Linha Cloud");
@@ -42,5 +43,5 @@ public class Software {
 
         setNome("Software sem importância");
         setTipoLicenca("Proprietária");
-    }
+    }*/
 }

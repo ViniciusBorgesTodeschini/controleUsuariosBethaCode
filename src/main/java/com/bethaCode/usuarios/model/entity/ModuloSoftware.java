@@ -19,11 +19,12 @@ public class ModuloSoftware {
     @Column(nullable = false, length = 100)
     private String nome;
 
+    @ManyToOne
     @NotEmpty(message = "O campo software deve ser informado!")
     @JoinColumn(name = "id_software")
     private Software software;
 
-    @PrePersist
+    /*@PrePersist
     public void prePersiste(){
         //Betha
         setNome("Contábil");
@@ -38,5 +39,5 @@ public class ModuloSoftware {
         setNome("Contábil");
 
         setNome("Financeiro");
-    }
+    }*/
 }
