@@ -44,7 +44,7 @@ public class Empresa {
     @Column
     private String uf;
 
-    @PrePersist
+    /*@PrePersist
     public void prePersiste(){
         setRazaoSocial("Betha Sistemas Ltda.");
         setNomeFantasia("Betha Sistemas - Matriz");
@@ -61,6 +61,6 @@ public class Empresa {
         setBairro("Centro");
         setCidade("São Paulo");
         setUf("SP");
-    }
+    }*/
 
 }

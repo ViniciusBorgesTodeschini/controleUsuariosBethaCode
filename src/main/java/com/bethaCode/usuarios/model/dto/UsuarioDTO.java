@@ -9,7 +9,7 @@ public class UsuarioDTO {
     private String nome;
     private String cpf;
     private String nomeUsuario;
-    private String senha;
+    //private String senha;
     private String funcao;
     private String setor;
     private String empresa;
