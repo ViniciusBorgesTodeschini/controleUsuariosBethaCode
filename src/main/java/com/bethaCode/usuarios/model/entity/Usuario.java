@@ -29,7 +29,7 @@ public class Usuario {
     @Column(nullable = false, length = 20, name = "nome_usuario")
     private String nomeUsuario;
 
-    @NotEmpty(message = "O campo senha deve ser informado!")
+    //@NotEmpty(message = "O campo senha deve ser informado!")
     @Column(nullable = false, length = 20)
     private String senha;
 
@@ -47,7 +47,7 @@ public class Usuario {
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataCadastro;
 
-    @Column(name = "altera_dados",nullable = false)
+    /*@Column(name = "altera_dados",nullable = false)
     private Boolean alteraDados;
 
     @Column(name = "altera_senha",nullable = false)
@@ -57,7 +57,7 @@ public class Usuario {
     private Boolean alteraLogin;
 
     @Column(name = "redefine_senha",nullable = false)
-    private Boolean redefineSenha;
+    private Boolean redefineSenha;*/
 
     String senhaPadrao = "senha123";
 

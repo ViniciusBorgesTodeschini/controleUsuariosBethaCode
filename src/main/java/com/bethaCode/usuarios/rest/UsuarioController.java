@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/usuarios")
+@CrossOrigin("http://localhost:4200")
 public class UsuarioController {
 
     private final UsuarioRepository repository;
@@ -24,6 +26,11 @@ public class UsuarioController {
     @ResponseStatus(HttpStatus.CREATED)
     public Usuario salvarUsuario(@Valid @RequestBody Usuario usuario){
         return repository.save(usuario);
+    }
+
+    @GetMapping
+    public List<Usuario> listarUsuarios(){
+        return repository.findAll();
     }
 
     @GetMapping("{id}")
