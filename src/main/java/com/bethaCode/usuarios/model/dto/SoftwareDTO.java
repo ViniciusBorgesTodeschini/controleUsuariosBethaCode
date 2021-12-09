@@ -8,4 +8,8 @@ public class SoftwareDTO {
     private String nome;
     private String tipoLicenca;
     private Integer idEmpresa;
+
+    public SoftwareDTO(){
+
+    }
 }

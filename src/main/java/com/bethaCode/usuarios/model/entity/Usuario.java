@@ -29,7 +29,6 @@ public class Usuario {
     @Column(nullable = false, length = 20, name = "nome_usuario")
     private String nomeUsuario;
 
-    //@NotEmpty(message = "O campo senha deve ser informado!")
     @Column(nullable = false, length = 20)
     private String senha;
 

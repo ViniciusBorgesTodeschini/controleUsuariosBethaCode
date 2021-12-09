@@ -33,15 +33,5 @@ public class Software {
         //Betha
         setNome("Linha Cloud");
         setTipoLicenca("Proprietária");
-
-        setNome("SAPO");
-        setTipoLicenca("Proprietária");
-
-        //Outras
-        setNome("Outro software qualquer");
-        setTipoLicenca("Proprietária");
-
-        setNome("Software sem importância");
-        setTipoLicenca("Proprietária");
     }*/
 }

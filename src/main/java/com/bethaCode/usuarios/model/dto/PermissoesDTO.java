@@ -8,4 +8,8 @@ public class PermissoesDTO {
     private String nome;
     private Integer idUsuario;
     private Integer IdModuloSoftware;
+
+    public PermissoesDTO(){
+
+    }
 }
