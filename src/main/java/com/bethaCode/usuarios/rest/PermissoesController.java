@@ -35,10 +35,10 @@ public class PermissoesController {
 
         Integer idModulo = permissoesDTO.getIdModuloSoftware();
         ModuloSoftware moduloSoftware = moduloSoftwareRepository
-                        .findById(idUsuario)
+                        .findById(idModulo)
                         .orElseThrow(()-> new ResponseStatusException(
                                 HttpStatus.BAD_REQUEST,
-                                "Módulo " + idModulo + " não localizado na aplicação!"));
+                                "Módulo do software" + idModulo + " não localizado na aplicação!"));
 
         Permissoes permissoes = new Permissoes();
         permissoes.setNome(permissoesDTO.getNome());

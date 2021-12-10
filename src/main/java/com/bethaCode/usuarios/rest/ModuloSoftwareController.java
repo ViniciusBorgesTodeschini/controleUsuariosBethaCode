@@ -50,7 +50,7 @@ public class ModuloSoftwareController {
                 .findById(id)
                 .orElseThrow(()-> new ResponseStatusException(
                         HttpStatus.BAD_REQUEST,
-                        "Módulo " + id + " não localizada na aplicação!"));
+                        "Módulo do software" + id + " não localizada na aplicação!"));
     }
 
     @DeleteMapping("{id}")
