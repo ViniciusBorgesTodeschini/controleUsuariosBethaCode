@@ -6,7 +6,8 @@ import lombok.Setter;
 @Getter@Setter
 public class ModuloSoftwareDTO {
     private String nome;
-    private Integer idSoftware;
+    //private Integer idSoftware;
+    private String nomeSoftware;
 
     public ModuloSoftwareDTO(){
 

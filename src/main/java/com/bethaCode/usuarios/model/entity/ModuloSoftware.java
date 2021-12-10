@@ -19,10 +19,14 @@ public class ModuloSoftware {
     @Column(nullable = false, length = 100)
     private String nome;
 
-    @ManyToOne
+    @NotEmpty(message = "O campo nome do software deve ser informado!")
+    @Column(nullable = false, length = 100, name = "nome_software")
+    private String nomeSoftware;
+
+    /*@ManyToOne
     @NotEmpty(message = "O campo software deve ser informado!")
     @JoinColumn(name = "id_software")
-    private Software software;
+    private Software software;*/
 
     /*@PrePersist
     public void prePersiste(){
