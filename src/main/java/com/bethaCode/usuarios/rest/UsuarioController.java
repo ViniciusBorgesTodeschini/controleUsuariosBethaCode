@@ -72,32 +72,4 @@ public class UsuarioController {
                 .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,
                         "Não foi possível localizar o usuário " + id + "!"));
     }
-
-    /*//Esse altera para a senha desejada pelo usuario
-    @PutMapping("{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void alterarSenha(@PathVariable Integer id, @Valid @RequestBody Usuario dadoAtualizado){
-        repository
-                .findById(id)
-                .map(usuario -> {
-                    usuario.setSenha(dadoAtualizado.getSenha());
-                    return repository.save(usuario);
-                })
-                .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "Não foi possível localizar o usuário " + id + "!"));
-    }
-
-    //Esse volta para a senha padrão de sistema
-    @PutMapping("{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void redefinirSenha(@PathVariable Integer id){
-        repository
-                .findById(id)
-                .map(usuario -> {
-                    usuario.setSenha(usuario.getSenhaPadrao());
-                    return repository.save(usuario);
-                })
-                .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "Não foi possível localizar o usuário " + id + "!"));
-    }*/
 }

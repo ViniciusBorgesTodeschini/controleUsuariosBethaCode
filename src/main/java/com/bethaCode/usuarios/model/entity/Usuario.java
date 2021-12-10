@@ -46,18 +46,6 @@ public class Usuario {
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataCadastro;
 
-    /*@Column(name = "altera_dados",nullable = false)
-    private Boolean alteraDados;
-
-    @Column(name = "altera_senha",nullable = false)
-    private Boolean alteraSenha;
-
-    @Column(name = "altera_login",nullable = false)
-    private Boolean alteraLogin;
-
-    @Column(name = "redefine_senha",nullable = false)
-    private Boolean redefineSenha;*/
-
     String senhaPadrao = "senha123";
 
     @PrePersist

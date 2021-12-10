@@ -23,25 +23,4 @@ public class ModuloSoftware {
     @Column(nullable = false, length = 100, name = "nome_software")
     private String nomeSoftware;
 
-    /*@ManyToOne
-    @NotEmpty(message = "O campo software deve ser informado!")
-    @JoinColumn(name = "id_software")
-    private Software software;*/
-
-    /*@PrePersist
-    public void prePersiste(){
-        //Betha
-        setNome("Contábil");
-
-        setNome("Tesouraria");
-
-        setNome("Fly-e Nota");
-
-        setNome("Livro eletrônico");
-
-        //Outras
-        setNome("Contábil");
-
-        setNome("Financeiro");
-    }*/
 }
