@@ -16,8 +16,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/permissoes")
-@CrossOrigin("http://localhost:4200")
 @RequiredArgsConstructor
+@CrossOrigin("http://localhost:4200")
 public class PermissoesController {
     private final ModuloSoftwareRepository moduloSoftwareRepository;
     private final UsuarioRepository usuarioRepository;
