@@ -12,8 +12,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/permissoes")
+@CrossOrigin("http://localhost:4200")
 @RequiredArgsConstructor
 public class PermissoesController {
     private final ModuloSoftwareRepository moduloSoftwareRepository;
@@ -42,6 +45,12 @@ public class PermissoesController {
         permissoes.setUsuario(usuario);
         permissoes.setModuloSoftware(moduloSoftware);
         return permissoesRepository.save(permissoes);
+    }
+
+    @GetMapping
+    public List<Permissoes> pesquisar(
+            @RequestParam(value  = "nome", required = false, defaultValue = "")String nome){
+        return permissoesRepository.findByNomeUsuario("%" + nome + "%");
     }
 
     @GetMapping("{id}")
