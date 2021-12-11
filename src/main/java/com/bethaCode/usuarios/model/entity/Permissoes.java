@@ -19,12 +19,12 @@ public class Permissoes {
     private String nome;
 
     @ManyToOne
-    @NotEmpty(message = "O campo usuário deve ser informado!")
+    //@NotEmpty(message = "O campo usuário deve ser informado!")
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
     @ManyToOne
-    @NotEmpty(message = "O campo módulo deve ser informado!")
+    //@NotEmpty(message = "O campo módulo deve ser informado!")
     @JoinColumn(name = "id_modulo_software")
     private ModuloSoftware moduloSoftware;
 }
